@@ -48,15 +48,17 @@ We created the directions below so that you can enable mimicry on your own Puppe
 You need to download several software packages to run Pupper's computer vision stack properly. Each of them are described below.
 
 StanfordQuadruped Repo
-git clone this repo, and use "git checkout vision" to make sure you are cloned into this branch of the repository.
+git clone this repo, and use "git checkout mimic" to make sure you are cloned into this branch of the repository.
 
 depthai-python
 depthai-python contains the models, example code, and CV dependencies to process the data from the OAKD-Lite
 
-Follow the instructions on the depthai-python github (https://github.com/luxonis/depthai-python) to download depthai-python
-For your first time using DepthAI on any machine, run "install_requirements.py" within depthai-python/examples to get all dependencies
-Try running examples/ObjectTracking/object_tracker.py on your machine as a test to make sure all dependencies are met
-X11 forwarding -- IMPORTANT --
+* Follow the instructions on the depthai-python github (https://github.com/luxonis/depthai-python) to download depthai-python
+* For your first time using DepthAI on any machine, run "install_requirements.py" within depthai-python/examples to get all dependencies
+* Try running examples/ObjectTracking/object_tracker.py on your machine as a test to make sure all dependencies are met 
+
+## X11 forwarding -- IMPORTANT -- 
+
 One problem you run into when running depthai-python code on Pupper's RasPi is that the RasPi does not have a monitor, and the code is designed to display the bounding boxes and CV data in real time on a monitor. To prevent from issues associated with this, you must enable X11 forwarding before SSHing into the RasPi onboard Pupper. This will display the real time Pupper vision on your machine's monitor rather than trying to display it on the RasPi. First, you must download an X11 forwarding program.
 
 Mac:
