@@ -36,6 +36,50 @@ Main documentation: https://pupper.readthedocs.io/en/latest/
 You can find the bill of materials, pre-made kit purchasing options, assembly instructions, software installation, etc at this website.
 
 
+## Mimic (Offshoot from vision branch)
+The vision stack is currently in initial stages of development. We are using an OAKD-Lite (Fixed Focus) to give Pupper eyes, complemented by DepthAI's python software package to run lean computer vision models for pose estimation and mimicry. 
+
+## Spring 2023 Final Project
+During the Spring 2023 offering of CS199P, one team (Jacob Rintamaki and Tamish Pulappadi) started the initial work for allowing pupper to mimic the poses of observers. During the Spring 2023 quarter we:
+
+We created the directions below so that you can enable mimicry on your own Pupper using the OAKD-Lite!
+
+## Install requirements
+You need to download several software packages to run Pupper's computer vision stack properly. Each of them are described below.
+
+StanfordQuadruped Repo
+git clone this repo, and use "git checkout vision" to make sure you are cloned into this branch of the repository.
+
+depthai-python
+depthai-python contains the models, example code, and CV dependencies to process the data from the OAKD-Lite
+
+Follow the instructions on the depthai-python github (https://github.com/luxonis/depthai-python) to download depthai-python
+For your first time using DepthAI on any machine, run "install_requirements.py" within depthai-python/examples to get all dependencies
+Try running examples/ObjectTracking/object_tracker.py on your machine as a test to make sure all dependencies are met
+X11 forwarding -- IMPORTANT --
+One problem you run into when running depthai-python code on Pupper's RasPi is that the RasPi does not have a monitor, and the code is designed to display the bounding boxes and CV data in real time on a monitor. To prevent from issues associated with this, you must enable X11 forwarding before SSHing into the RasPi onboard Pupper. This will display the real time Pupper vision on your machine's monitor rather than trying to display it on the RasPi. First, you must download an X11 forwarding program.
+
+## Mac:
+Download XQuartz https://www.xquartz.org/
+Run XQuartz every time before SSHing into the RasPi (it may run without even popping up on your screen)
+SSH as normal but add "-X" to the end of your SSH command. For example: ssh pi@raspberrypi.local -X
+
+## Windows:
+Download XMing
+Run XMing very time before SSHing into the RasPi (it may run without even popping up on your screen)
+SSH as normal (with Putty https://www.putty.org/) but in Putty, click on the plus sign to the left of "SSH" in the left hand pane, then click "X11" and check the box labeled "Enable X11 Forwarding". You can save these settings in Putty.
+
+## Python Version
+Always run your commands on the RasPi with "python3" rather than "python" since DepthAI code is not compatible with Python 2.7, which is the default on the Pi.
+
+## Hardware troubleshooting
+Use a USB3-USBC cable (the one with a blue inner piece) to connect the RasPi and the OAKD-Lite. Make sure this is plugged into one of the USB3 (blue inner piece) ports on the RasPi
+Unplug the jumper cables that power the RasPi from the onboard PCB. You don't want to power the RasPi from onboard and offboard power simultaneously
+Use an external USB-C cable to power the RasPi. This plugs into the top of Pupper
+
+## Software troubleshooting
+Make sure to follow directions in the X11 forwarding section above. This is the root of most problems
+
 ## Help
 - Feel free to raise an issue (https://github.com/stanfordroboticsclub/StanfordQuadruped/issues/new/choose) or email me at nathankau [at] stanford [dot] edu
 - We also have a Google group set up here: https://groups.google.com/forum/#!forum/stanford-quadrupeds
