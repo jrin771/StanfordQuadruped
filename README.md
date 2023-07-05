@@ -35,8 +35,12 @@ Main documentation: https://pupper.readthedocs.io/en/latest/
 
 You can find the bill of materials, pre-made kit purchasing options, assembly instructions, software installation, etc at this website.
 
+## Help
+- Feel free to raise an issue (https://github.com/stanfordroboticsclub/StanfordQuadruped/issues/new/choose) or email me at nathankau [at] stanford [dot] edu
+- We also have a Google group set up here: https://groups.google.com/forum/#!forum/stanford-quadrupeds
 
-## Mimic (Offshoot from vision branch)
+
+# Mimic (Offshoot from vision branch)
 The vision stack is currently in initial stages of development. We are using an OAKD-Lite (Fixed Focus) to give Pupper eyes, complemented by DepthAI's python software package to run lean computer vision models for pose estimation and mimicry. 
 
 ## Spring 2023 Final Project
@@ -83,7 +87,6 @@ Always run your commands on the RasPi with "python3" rather than "python" since 
 * Make sure to follow directions in the X11 forwarding section above. This is the root of most problems
 
 ## Help
-- Feel free to raise an issue (https://github.com/stanfordroboticsclub/StanfordQuadruped/issues/new/choose) or email me at nathankau [at] stanford [dot] edu
-- We also have a Google group set up here: https://groups.google.com/forum/#!forum/stanford-quadrupeds
+- Feel free to raise an issue (https://github.com/stanfordroboticsclub/StanfordQuadruped/issues/new/choose) or email me at jrin [at] stanford [dot] edu or tamish01 [at] stanford [dot] edu 
 
 
