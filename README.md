@@ -44,7 +44,11 @@ You can find the bill of materials, pre-made kit purchasing options, assembly in
 The vision stack is currently in initial stages of development. We are using an OAKD-Lite (Fixed Focus) to give Pupper eyes, complemented by DepthAI's python software package to run lean computer vision models for pose estimation and mimicry. 
 
 ## Spring 2023 Final Project
-During the Spring 2023 offering of CS199P, one team (Jacob Rintamaki and Tamish Pulappadi) started the initial work for allowing pupper to mimic the poses of observers. During the Spring 2023 quarter we:
+During the Spring 2023 offering of CS199P, one team (Jacob Rintamaki and Tamish Pulappadi) started the initial work for allowing pupper to mimic the poses of observers. During the Spring 2023 quarter we: 
+
+* Created a system that could conduct pose estimation on a person and get their yaw, yaw_rate, pitch, and roll values in real-time.
+
+* Valiantly worked on connecting this interface to pupper but the demo was incomplete as of this writing. 
 
 We created the directions below so that you can enable mimicry on your own Pupper using the OAKD-Lite!
 
