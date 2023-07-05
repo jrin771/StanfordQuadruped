@@ -59,26 +59,26 @@ Try running examples/ObjectTracking/object_tracker.py on your machine as a test 
 X11 forwarding -- IMPORTANT --
 One problem you run into when running depthai-python code on Pupper's RasPi is that the RasPi does not have a monitor, and the code is designed to display the bounding boxes and CV data in real time on a monitor. To prevent from issues associated with this, you must enable X11 forwarding before SSHing into the RasPi onboard Pupper. This will display the real time Pupper vision on your machine's monitor rather than trying to display it on the RasPi. First, you must download an X11 forwarding program.
 
-## Mac:
-Download XQuartz https://www.xquartz.org/
-Run XQuartz every time before SSHing into the RasPi (it may run without even popping up on your screen)
-SSH as normal but add "-X" to the end of your SSH command. For example: ssh pi@raspberrypi.local -X
+Mac:
+* Download XQuartz https://www.xquartz.org/
+* Run XQuartz every time before SSHing into the RasPi (it may run without even popping up on your screen)
+* SSH as normal but add "-X" to the end of your SSH command. For example: ssh pi@raspberrypi.local -X
 
-## Windows:
-Download XMing
-Run XMing very time before SSHing into the RasPi (it may run without even popping up on your screen)
-SSH as normal (with Putty https://www.putty.org/) but in Putty, click on the plus sign to the left of "SSH" in the left hand pane, then click "X11" and check the box labeled "Enable X11 Forwarding". You can save these settings in Putty.
+Windows:
+* Download XMing
+* Run XMing very time before SSHing into the RasPi (it may run without even popping up on your screen)
+* SSH as normal (with Putty https://www.putty.org/) but in Putty, click on the plus sign to the left of "SSH" in the left hand pane, then click "X11" and check the box labeled "Enable X11 Forwarding". You can save these settings in Putty.
 
 ## Python Version
 Always run your commands on the RasPi with "python3" rather than "python" since DepthAI code is not compatible with Python 2.7, which is the default on the Pi.
 
 ## Hardware troubleshooting
-Use a USB3-USBC cable (the one with a blue inner piece) to connect the RasPi and the OAKD-Lite. Make sure this is plugged into one of the USB3 (blue inner piece) ports on the RasPi
-Unplug the jumper cables that power the RasPi from the onboard PCB. You don't want to power the RasPi from onboard and offboard power simultaneously
-Use an external USB-C cable to power the RasPi. This plugs into the top of Pupper
+* Use a USB3-USBC cable (the one with a blue inner piece) to connect the RasPi and the OAKD-Lite. Make sure this is plugged into one of the USB3 (blue inner piece) ports on the RasPi
+* Unplug the jumper cables that power the RasPi from the onboard PCB. You don't want to power the RasPi from onboard and offboard power simultaneously
+* Use an external USB-C cable to power the RasPi. This plugs into the top of Pupper
 
 ## Software troubleshooting
-Make sure to follow directions in the X11 forwarding section above. This is the root of most problems
+* Make sure to follow directions in the X11 forwarding section above. This is the root of most problems
 
 ## Help
 - Feel free to raise an issue (https://github.com/stanfordroboticsclub/StanfordQuadruped/issues/new/choose) or email me at nathankau [at] stanford [dot] edu
